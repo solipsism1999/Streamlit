@@ -7,7 +7,7 @@ from transformers import GPT2Tokenizer, GPT2LMHeadModel
 import nltk
 from nltk.tokenize import sent_tokenize
 import re
-
+nltk.download('punkt')
 model = GPT2LMHeadModel.from_pretrained("./modeltune")
 tokenizer = GPT2Tokenizer.from_pretrained("./modeltune")
 
