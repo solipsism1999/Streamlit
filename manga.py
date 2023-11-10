@@ -35,7 +35,7 @@ def generate_text_image(text):
     draw = ImageDraw.Draw(image)
 
     # Choose a font (Pillow's default font)
-    font = ImageFont.truetype(font="manga-font.ttf", size=15)
+    font = ImageFont.truetype(font="manga-font.ttf", size=20)
 
     # Calculate text size
     text_width, text_height = draw.textsize(text, font=font)
