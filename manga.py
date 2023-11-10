@@ -158,7 +158,7 @@ seed = random.randint(0, 1000000000)
 
 # Set up our connection to the API.
 stability_api = client.StabilityInference(
-    key="STABILITY_API_KEY",
+    key=STABILITY_API_KEY,
     verbose=True,
     engine="stable-diffusion-xl-1024-v1-0"
 )
