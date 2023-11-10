@@ -87,6 +87,7 @@ Your task is to take a brief storyline and divide it into six distinct manga pan
 Each manga panel requires a detailed description, including the characters and the panel's background. 
 Character descriptions should be precise, and avoid using character names within the panel descriptions. 
 You must also provide concise text for each panel, consisting of no more than two short sentences that start with the character's name.
+You must proivde a minimum of one line and a maximum of two lines of dialouge for each manga panel. The dialouge must be kept very concise.
 
 Example Input:
 Characters: Lily is a cheerful girl with a ribbon in her hair. Max is a mischievous boy with a backpack.
