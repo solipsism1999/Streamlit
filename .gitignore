@@ -1,0 +1,9 @@
+# Ignore generated files
+__pycache__/
+*.pyc
+
+# Ignore the saved fine-tuned model
+saved_fine_tuned_model/
+
+# Ignore configuration file
+config.ini
