@@ -4,5 +4,4 @@ Pillow==9.4.0
 stability_sdk==0.8.4
 streamlit==1.25.0
 transformers==4.35.0
-json
-configparser
+configparser==6.0.0
