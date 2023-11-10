@@ -9,8 +9,8 @@ from nltk.tokenize import sent_tokenize
 import re
 
 # Load the fine-tuned model and tokenizer
-model = GPT2LMHeadModel.from_pretrained("./saved_fine_tuned_model")
-tokenizer = GPT2Tokenizer.from_pretrained("./saved_fine_tuned_model")
+model = GPT2LMHeadModel.from_pretrained("./saved-fine-tuned-model")
+tokenizer = GPT2Tokenizer.from_pretrained("./saved-fine-tuned-model")
 
 # Define the genre options
 genre_options = ["Action", "Drama", "Comedy", "Romance"]
