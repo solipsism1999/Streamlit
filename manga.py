@@ -12,6 +12,7 @@ import warnings
 import random
 from stability_sdk import client
 import stability_sdk.interfaces.gooseai.generation.generation_pb2 as generation
+import streamlit as st
 
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 STABILITY_API_KEY = st.secrets["STABILITY_API_KEY"]
