@@ -12,18 +12,9 @@ import warnings
 import random
 from stability_sdk import client
 import stability_sdk.interfaces.gooseai.generation.generation_pb2 as generation
-import configparser
 
-# Load configuration from config.ini
-config = configparser.ConfigParser()
-config.read('config.ini')
-
-# Retrieve API keys and model paths
-OPENAI_API_KEY = config.get('API_KEYS', 'OPENAI_API_KEY')
-STABILITY_API_KEY = config.get('API_KEYS', 'STABILITY_API_KEY')
-STABILITY_HOST = config.get('API_KEYS', 'STABILITY_HOST')
-
-
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
+STABILITY_API_KEY = st.secrets["STABILITY_API_KEY"]
 def add_text_to_panel(text, panel_image):
     text_image = generate_text_image(text)
     result_image = Image.new('RGB', (panel_image.width, panel_image.height + text_image.height))
@@ -86,6 +77,7 @@ def create_strip(images):
 
     return result_image.resize((1024, 1536))
 
+os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
 
 template = """
 You are a manga artist.
