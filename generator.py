@@ -43,6 +43,7 @@ if selected_tab == "Storyboard":
 
             # Initialize a list to store panel images
             panel_images = []
+            STYLE = "manga comic, greyscale"
 
             # Generate images for each panel and add text
             for panel in panels:
