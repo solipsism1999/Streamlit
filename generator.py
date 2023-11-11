@@ -46,10 +46,10 @@ if selected_tab == "Storyboard":
 
             # Generate images for each panel and add text
             for panel in panels:
-                panel_prompt = panel["description"] + ", cartoon box, manga comic, greyscale"
-                panel_image = text_to_image(panel_prompt)
-                panel_image_with_text = add_text_to_panel(panel["text"], panel_image)
-                panel_images.append(panel_image_with_text)
+               panel_prompt = panel["description"] + ", cartoon box, " + STYLE
+               print(f"Generate panel {panel['number']} with prompt: {panel_prompt}")
+               panel_image = text_to_image(panel_prompt)
+               panel_image_with_text = add_text_to_panel(panel, panel_image)  # Pass the panel dictionary
 
             # Create a strip from the panel images and save it
             strip_image = create_strip(panel_images)

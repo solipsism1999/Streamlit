@@ -16,12 +16,18 @@ import streamlit as st
 
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 STABILITY_API_KEY = st.secrets["STABILITY_API_KEY"]
-def add_text_to_panel(text, panel_image):
-    text_image = generate_text_image(text)
-    result_image = Image.new('RGB', (panel_image.width, panel_image.height + text_image.height))
-    result_image.paste(panel_image, (0, 0))
-    result_image.paste(text_image, (0, panel_image.height))
-    return result_image
+def add_text_to_panel(panel, panel_image):
+   # Check if 'text' key is present in the panel dictionary
+   if 'text' in panel:
+       text = panel['text']
+   else:
+       text = ""  # Set a default empty text if 'text' key is not present
+
+   text_image = generate_text_image(text)
+   result_image = Image.new('RGB', (panel_image.width, panel_image.height + text_image.height))
+   result_image.paste(panel_image, (0, 0))
+   result_image.paste(text_image, (0, panel_image.height))
+   return result_image
 
 def generate_text_image(text):
     # Define image dimensions
