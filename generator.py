@@ -34,30 +34,30 @@ if selected_tab == "Storyboard":
 
 
     # User input for the scenario
-scenario = st.text_area("Enter your scenario:")
-STYLE = "manga comic, greyscale"
+    scenario = st.text_area("Enter your scenario:")
+    STYLE = "manga comic, greyscale"
 
-if st.button("Generate Manga Panels"):
-    if scenario:
-        # Generate panels
-        panels = generate_panels(scenario)
+    if st.button("Generate Manga Panels"):
+        if scenario:
+            # Generate panels
+            panels = generate_panels(scenario)
 
-        # Initialize a list to store panel images
-        panel_images = []
+            # Initialize a list to store panel images
+            panel_images = []
 
-        # Generate images for each panel and add text
-        for panel in panels:
-            panel_prompt = panel["description"] + ", cartoon box, " + STYLE
-            print(f"Generate panel {panel['number']} with prompt: {panel_prompt}")
-            panel_image = text_to_image(panel_prompt)
-            panel_image_with_text = add_text_to_panel(panel, panel_image)  # Pass the panel dictionary
-            panel_images.append(panel_image_with_text)  # Append the generated image to the list
+            # Generate images for each panel and add text
+            for panel in panels:
+                panel_prompt = panel["description"] + ", cartoon box, " + STYLE
+                print(f"Generate panel {panel['number']} with prompt: {panel_prompt}")
+                panel_image = text_to_image(panel_prompt)
+                panel_image_with_text = add_text_to_panel(panel, panel_image)  # Pass the panel dictionary
+                panel_images.append(panel_image_with_text)  # Append the generated image to the list
 
-        # Create a strip from the panel images and save it
-        strip_image = create_strip(panel_images)
+            # Create a strip from the panel images and save it
+            strip_image = create_strip(panel_images)
 
-        # Display generated strip
-        st.image(strip_image, use_column_width=True, caption="Generated Manga Comic Strip")
+            # Display generated strip
+            st.image(strip_image, use_column_width=True, caption="Generated Manga Comic Strip")
             
 elif selected_tab == "Get Inspired":
     st.header("Let us help you come up with ideas!")
