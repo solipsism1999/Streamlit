@@ -116,7 +116,7 @@ Short Scenario:
 {scenario}
 
 Split the scenario in 6 parts:
-"
+
 """
 
 def generate_panels(scenario):
