@@ -36,14 +36,12 @@ if selected_tab == "Storyboard":
     # User input for the scenario
     scenario = st.text_area("Enter your scenario:")
     STYLE = "manga comic, greyscale"
-
+    # Initialize a list to store panel images
+    panel_images = []
     if st.button("Generate Manga Panels"):
         if scenario:
             # Generate panels
             panels = generate_panels(scenario)
-
-            # Initialize a list to store panel images
-            panel_images = []
 
             # Generate images for each panel and add text
             for panel in panels:

@@ -58,6 +58,7 @@ def generate_text_image(text):
 
     return image
 
+# Function to resize and add a black border to an image
 def resize_and_add_border(image, target_size, border_size):
     resized_image = Image.new("RGB", target_size, "black")
     resized_image.paste(image, ((target_size[0] - image.width) // 2, (target_size[1] - image.height) // 2))
