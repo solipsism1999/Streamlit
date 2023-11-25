@@ -41,7 +41,7 @@ def generate_text_image(text):
     draw = ImageDraw.Draw(image)
 
     # Choose a font (Pillow's default font)
-    font = ImageFont.truetype(font="manga-font.ttf", size=20)
+    font = ImageFont.truetype(font="manga-font.ttf", size=15)
 
     # Calculate text size
     text_width, text_height = draw.textsize(text, font=font)
@@ -94,7 +94,7 @@ Your task is to take a brief storyline and divide it into six distinct manga pan
 Each manga panel requires a detailed description, including the characters and the panel's background. 
 Character descriptions should be precise, and avoid using character names within the panel descriptions. 
 You must also provide concise text for each panel, consisting of no more than two short sentences that start with the character's name.
-You must proivde a minimum of one line and a maximum of two lines of dialouge for each manga panel. The dialouge must be kept very concise.
+You must proivde a minimum of one line and a maximum of two lines of dialouge for each manga panel. The dialouge must be kept very concise. You must also provide a description for each of the 6 panels.
 
 Example Input:
 Characters: Lily is a cheerful girl with a ribbon in her hair. Max is a mischievous boy with a backpack.
