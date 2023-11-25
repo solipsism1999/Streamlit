@@ -4,6 +4,3 @@ __pycache__/
 
 # Ignore the saved fine-tuned model
 modeltune/
-
-# Ignore configuration file
-config.ini
